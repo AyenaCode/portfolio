@@ -60,10 +60,10 @@ export const Work = () => {
           </Link>
         </Button>
       </div>
-      <h3 className="text-2xl font-bold mt-10">Mes 4 derniers projets</h3>
-      <p className="text-lg text-muted-foreground pb-4 pt-2">
-        Ces projets ont aider mes partenaires à booter leurs visibilités et à
-        gagner plus de <Code>clients fidèles.</Code>
+      <h3 className="text-2xl font-bold mt-16">Mes 4 derniers projets</h3>
+      <p className="lg:text-lg text-muted-foreground py-4">
+        Ils ont booté leurs visibilités et gagner plus de
+        <Code>clients fidèles</Code> grâce à mon expertise.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <WorkCard />
