@@ -61,13 +61,13 @@ export const Hero = () => {
         </div>
 
         {/* Image */}
-        <div className="relative w-32 sm:w-40 md:w-1/3 aspect-square">
+        <div className="relative w-32 sm:w-40 md:w-1/3 aspect-square pt-6">
           <Image
             src={Photo}
-            alt="AyenaCode - Développeur Front-end React"
+            alt="AyenaCode - Développeur React et NextJS"
             fill
             priority
-            className="rounded-full object-cover"
+            className="rounded-b-full object-cover"
           />
         </div>
       </div>
