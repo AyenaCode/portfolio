@@ -1,9 +1,9 @@
+import Photo from "@/assets/imgs/photo.png";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { ComponentPropsWithoutRef } from "react";
 import { FaCode } from "react-icons/fa";
 import { SiReactos } from "react-icons/si";
-import Photo from "../assets/imgs/photo.png";
 import { Container } from "./Container";
 
 export const Code = ({
@@ -44,7 +44,7 @@ export const Hero = () => {
             <FaCode className="inline-block mr-1 text-primary" />
             Développeur
           </Code>
-          front-end React
+          web Next.js
         </h1>
         <h2 className="lg:text-lg text-muted-foreground md:mb-6">
           Je vous aide à concevoir des applications
@@ -58,9 +58,10 @@ export const Hero = () => {
       </div>
       <Image
         src={Photo}
-        alt="Photo de moi"
+        alt="AyenaCode - Développeur Front-end React"
         width={300}
         height={300}
+        priority
         className="absolute top-0 right-16 md:top-3 md:right-28 rounded-full w-full max-w-28 md:max-w-32 lg:max-w-40 object-cover"
       />
     </Container>
