@@ -1,16 +1,16 @@
+import { Button } from "@/components/ui/button";
+import { StaticImageData } from "next/image";
+import Link from "next/link";
+import { BsWhatsapp } from "react-icons/bs";
+import { MdOutgoingMail } from "react-icons/md";
 import { Container } from "./Container";
 import { Code } from "./Hero";
 import { WorkCard } from "./WorkCard";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { MdOutgoingMail } from "react-icons/md";
-import { BsWhatsapp } from "react-icons/bs";
-import { StaticImageData } from "next/image";
 
 // Importez vos images
-import Project1_1 from "@/assets/imgs/project1/burger.png";
 import Project1_2 from "@/assets/imgs/project1/b1.png";
 import Project1_3 from "@/assets/imgs/project1/b2.png";
+import Project1_1 from "@/assets/imgs/project1/burger.png";
 import Project2_1 from "@/assets/imgs/project2/aura.png";
 import Project2_2 from "@/assets/imgs/project2/aura2.png";
 
@@ -49,27 +49,31 @@ const projects: Project[] = [
 export const Work = () => {
   return (
     <Container>
-      <div className="flex justify-center items-center gap-2">
-        <Button className="shadow-2xl rounded-md">Me contacter</Button>
-        <Button className="shadow-2xl rounded-md " variant="ghost">
-          <Link
-            className="flex items-center"
-            href="mailto:ayenacode1@gmail.com"
-            target="_blank"
-          >
-            <MdOutgoingMail className="text-primary h-6 w-6 mr-2" /> Mail
-          </Link>
+      <div className="sm:flex justify-center gap-2 text-center">
+        <Button className="shadow-2xl rounded-md mb-2 sm:mb-0">
+          Me contacter
         </Button>
-        <Button className="shadow-2xl rounded-md" variant="ghost">
-          <Link
-            className="flex items-center"
-            href="https://wa.me/22893367157"
-            target="_blank"
-          >
-            <BsWhatsapp className="text-primary h-6 w-6 mr-2" /> +228 93 36 71
-            57
-          </Link>
-        </Button>
+        <div>
+          <Button className="shadow-2xl rounded-md" variant="ghost">
+            <Link
+              className="flex items-center"
+              href="mailto:ayenacode1@gmail.com"
+              target="_blank"
+            >
+              <MdOutgoingMail className="text-primary h-6 w-6 mr-2" /> Mail
+            </Link>
+          </Button>
+          <Button className="shadow-2xl rounded-md" variant="ghost">
+            <Link
+              className="flex items-center"
+              href="https://wa.me/22893367157"
+              target="_blank"
+            >
+              <BsWhatsapp className="text-primary h-6 w-6 mr-2" /> +228 93 36 71
+              57
+            </Link>
+          </Button>
+        </div>
       </div>
       <section aria-label="Mes projets">
         <h2 className="text-2xl font-bold mt-16">Portfolio de Projets</h2>

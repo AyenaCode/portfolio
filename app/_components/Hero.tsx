@@ -25,10 +25,10 @@ export const Code = ({
 
 export const Hero = () => {
   return (
-    <Container className="py-8 relative">
+    <Container className="py-8 md:py-12 lg:py-16 relative min-h-[60vh] flex items-center">
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        className="absolute inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl"
       >
         <div
           style={{
@@ -38,32 +38,39 @@ export const Hero = () => {
           className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#c084fc] to-[#93c5fd] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
         />
       </div>
-      <div className="w-2/3 text-center md:ml-5 md:text-left">
-        <h1 className="text-2xl md:text-4xl font-bold mb-2 lg:mb-4">
-          <Code className="ml-0 py-0">
-            <FaCode className="inline-block mr-1 text-primary" />
-            Développeur
-          </Code>
-          web Next.js
-        </h1>
-        <h2 className="lg:text-lg text-muted-foreground md:mb-6">
-          Je vous aide à concevoir des applications
-          <Code>
-            <SiReactos className="inline-block mr-1" />
-            web performantes
-          </Code>
-          qui offrent des expériences utilisateur fluides boostant ainsi la
-          satisfaction client.
-        </h2>
+
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full gap-8">
+        {/* Texte */}
+        <div className="w-full md:w-2/3 text-center md:text-left space-y-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+            <Code className="ml-0 py-0">
+              <FaCode className="inline-block mr-1 text-primary" />
+              Développeur
+            </Code>
+            web Next.js
+          </h1>
+          <h2 className="text-base sm:text-lg lg:text-xl text-muted-foreground">
+            Je vous aide à concevoir des applications
+            <Code>
+              <SiReactos className="inline-block mr-1" />
+              web performantes
+            </Code>
+            qui offrent des expériences utilisateur fluides boostant ainsi la
+            satisfaction client.
+          </h2>
+        </div>
+
+        {/* Image */}
+        <div className="relative w-32 sm:w-40 md:w-1/3 aspect-square">
+          <Image
+            src={Photo}
+            alt="AyenaCode - Développeur Front-end React"
+            fill
+            priority
+            className="rounded-full object-cover"
+          />
+        </div>
       </div>
-      <Image
-        src={Photo}
-        alt="AyenaCode - Développeur Front-end React"
-        width={300}
-        height={300}
-        priority
-        className="absolute top-0 right-16 md:top-3 md:right-28 rounded-full w-full max-w-28 md:max-w-32 lg:max-w-40 object-cover"
-      />
     </Container>
   );
 };
